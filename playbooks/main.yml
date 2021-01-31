@@ -7,13 +7,13 @@
     - neovim
     - chrome
     - python
-    - nodejs
-    - ruby
+#    - nodejs
+#    - ruby
     - spotify
-    - dropbox
-    - vagrant
-    - docker
-    - vscode
+#    - dropbox
+#    - vagrant
+#    - docker
+#    - vscode
     - git
   become_user: root
   become: true

@@ -2,74 +2,76 @@
 # Configuration
 
 apt_packages:
-  # These are packages that you basically always need to have around
+  # ### These are packages that you basically always need to have around ###
   - curl
-  - gcc
-  - make
-  - nmap
+#  - gcc
+#  - make
+  # - nmap
   - wget
-  - build-essential
-  - software-properties-common
+  # - build-essential
+  # - software-properties-common
   - openjdk-15-jre
   - openjdk-15-jdk
-  - keepassx
-  - pandoc
-  # These are packages I tend to use a lot
+  # - keepassx
+  # - pandoc
+  # ### These are packages I tend to use a lot ###
   - ripgrep 
   - stow 
-  - universal-ctags 
-  - golang 
+  # - universal-ctags 
+  # - golang 
   - locales 
   - fd-find 
   - fzf 
   - vifm 
   - dos2unix 
   - tmux
-  # I use this one to strip ansii colour codes from files like logs
-  - colorized-logs 
+  # ### I use this one to strip ansii colour codes from files like logs ###
+  # - colorized-logs 
   - pass 
-  - mutt 
-  # This is needed for vim-clap and vim-todoist Neovim Plugins
-  - libssl-dev \
-  - build-essential \
-  # Interesting software that I like
-  - figlet
-  # This is needed for coc-nvim
-  - yarn
-  # Things needed for oh-my-zsh
-  - zsh
-  - build-essential
-  - curl
-  - file
-  - powerline
-  - fonts-powerline
+  # - mutt 
+  # ### This is needed for vim-clap and vim-todoist Neovim Plugins ###
+  # - libssl-dev \
+  # - build-essential \
+  # ### Interesting software that I like ###
+  # - figlet
+  # ### This is needed for coc-nvim ###
+  # - yarn
+  # ### Things needed for oh-my-zsh ###
+  # - zsh
+  # - build-essential
+  # - curl
+  # - file
+  # - powerline
+  # - fonts-powerline
+  # ### Packages specific to Eric ###
+  - e2guardian
 
-nodejs_version: node_15.x
+# nodejs_version: node_15.x
 
-npm_packages:
-  - http-server
-  - typescript
-  - karma-cli
-  - browserify
-  - webpack
-  - bower
-  - grunt
-  - gulp-cli
-  - less
+# npm_packages:
+#   - http-server
+#   - typescript
+#   - karma-cli
+#   - browserify
+#   - webpack
+#   - bower
+#   - grunt
+#   - gulp-cli
+#   - less
 
-ruby_gems:
-  - fpm
-  - jekyll
-  - rake
-  - sass
+# ruby_gems:
+#   - fpm
+#   - jekyll
+#   - rake
+#   - sass
 
-pip2_packages:
-  - fabric
+# pip2_packages:
+#   - fabric
 
 pip3_packages:
   - pipenv
-  - requests
-  - beautifulsoup4
+  # - requests
+  # - beautifulsoup4
   - Jinja2
-    # Needed for Ansible to talk to Windows hosts
+    # ### Needed for Ansible to talk to Windows hosts ###
   - winrm
