@@ -15,5 +15,6 @@
 #    - docker
 #    - vscode
     - git
+    - e2guardian
   become_user: root
   become: true

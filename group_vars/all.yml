@@ -43,8 +43,6 @@ apt_packages:
   # - file
   # - powerline
   # - fonts-powerline
-  # ### Packages specific to Eric ###
-  - e2guardian
 
 # nodejs_version: node_15.x
 
