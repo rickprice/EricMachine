@@ -1,6 +1,6 @@
 #!/bin/sh
 
 # Root Directory
-DIR=~/.dev-env
+DIR=~/.EricMachine
 
 ansible-playbook --ask-become-pass $DIR/playbooks/main.yml

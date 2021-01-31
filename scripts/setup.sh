@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Current directory
-DIR=~/.dev-env
+DIR=~/.EricMachine
 
 # Install Git, Python3, PIP and Ansible
 sudo apt-get install -y git python3 python3-pip ansible
