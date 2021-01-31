@@ -7,7 +7,8 @@ DIR=~/.EricMachine
 sudo apt-get install -y git python3 python3-pip ansible
 
 # Install collections
-ansible-galaxy collection install community.general
+# Currently no requirements to download
+#ansible-galaxy collection install community.general
 
 # Install external roles
 mkdir -p $DIR/.external-roles
