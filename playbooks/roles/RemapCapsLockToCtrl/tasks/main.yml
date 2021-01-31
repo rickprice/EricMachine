@@ -1,0 +1,7 @@
+---
+- name: Remap CapsLock to be another Ctrl key
+  ansible.builtin.lineinfile:
+    path: /etc/default/keyboard
+    regexp: 'XKBOPTIONS=""'
+    line: 'XKBOPTIONS="ctrl:nocaps"'
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Pop!_OS'

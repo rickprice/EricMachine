@@ -1,0 +1,19 @@
+- name: Install Common Development Tools
+  hosts: 127.0.0.1
+  connection: local
+  roles:
+    - RemapCapsLockToCtrl
+    - apt
+    - neovim
+    - chrome
+    - python
+    - nodejs
+    - ruby
+    - spotify
+    - dropbox
+    - vagrant
+    - docker
+    - vscode
+    - git
+  become_user: root
+  become: true

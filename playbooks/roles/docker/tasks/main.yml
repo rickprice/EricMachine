@@ -1,0 +1,27 @@
+---
+# Install & Configure Docker
+
+- name: Add Docker signing key
+  ansible.builtin.apt_key:
+    url: "{{ docker_ppa_key }}"
+    id: "{{ docker_ppa_id }}"
+    state: present
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ docker ]
+
+- name: Add Docker docker repository
+  ansible.builtin.apt_repository:
+    repo: "{{ docker_ppa }}"
+    state: present
+    filename: docker
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ docker ]
+
+- name: Install Docker Package
+  apt:
+    update_cache: True
+    pkg:
+    - docker-ce
+  become: yes
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ docker ]

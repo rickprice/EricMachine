@@ -1,0 +1,14 @@
+---
+# Install & Configure Ruby Gems
+
+- name: Install Ruby Gems for NeoVim
+  community.general.gem:
+    name: neovim
+    state: present
+
+- name: Install configured gems.
+  gem:
+    name: "{{ item }}"
+    state: present
+  become: true
+  with_items: "{{ ruby_gems | default([]) }}"

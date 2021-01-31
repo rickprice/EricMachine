@@ -1,0 +1,14 @@
+---
+# Install & Configure Ruby
+- name: Install ruby packages
+  apt:
+    pkg:
+    - ruby
+    - ruby-dev
+    - rubygems
+  become: yes
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ ruby ]
+ 
+# Install Ruby Gems
+- include_tasks: ruby_gems.yml

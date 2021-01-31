@@ -1,0 +1,27 @@
+---
+# Install & Configure Sublime Text
+
+- name: Add VSCode signing key
+  ansible.builtin.apt_key:
+    url: "{{ vscode_ppa_key }}"
+    id: "{{ vscode_ppa_id }}"
+    state: present
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ vscode ]
+
+- name: Add VSCode vscode repository
+  ansible.builtin.apt_repository:
+    repo: "{{ vscode_ppa }}"
+    state: present
+    filename: vscode
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ vscode ]
+
+- name: Install VSCode Package
+  apt:
+    update_cache: True
+    pkg:
+    - code
+  become: yes
+  when: ansible_pkg_mgr == 'apt'
+  tags: [ vscode ]

@@ -1,0 +1,5 @@
+---
+
+spotify_ppa: "deb http://repository.spotify.com stable non-free"
+
+spotify_ppa_key_url: https://download.spotify.com/debian/pubkey_0D811D58.gpg
