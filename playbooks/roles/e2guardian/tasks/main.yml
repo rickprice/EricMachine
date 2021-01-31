@@ -3,6 +3,8 @@
   apt:
     pkg:
     - e2guardian
+    # We need squid for things to work easily
+    - squid
   become: yes
   when: ansible_pkg_mgr == 'apt'
   tags: [ e2guardian ]
